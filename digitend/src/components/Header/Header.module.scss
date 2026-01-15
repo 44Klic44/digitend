@@ -1,0 +1,51 @@
+.header {
+  background: #2f5f52;
+  color: #fff;
+}
+
+.logo{
+    font-family: "Inter-Bold", sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+}
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.nav {
+  display: flex;
+  gap: 40px;
+
+  a {
+    color: #ffffff; // базовый цвет
+    font-family: "Inter-Medium", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    text-decoration: none; // убираем подчеркивание
+    cursor: pointer;
+
+    &:hover {
+      color: #b9f2a1; // цвет при наведении на конкретную ссылку
+    }
+  }
+
+  .home {
+    font-weight: 700;
+    color: #b9f2a1; // начальный цвет для Home
+  }
+}
+
+  
+
+.button {
+  background: #b8f1a5;
+  padding: 14px 18px;
+  border-radius: 8px;
+    font-family: "Inter-SemiBold", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+
