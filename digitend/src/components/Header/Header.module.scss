@@ -1,13 +1,11 @@
 .header {
-  background: #2f5f52;
+  background: transparent;
   color: #fff;
+  position: relative;
+  z-index: 10;
 }
 
-.logo{
-    font-family: "Inter-Bold", sans-serif;
-  font-size: 34px;
-  font-weight: 700;
-}
+/* ================= HEADER INNER ================= */
 .inner {
   display: flex;
   align-items: center;
@@ -15,37 +13,159 @@
   height: 80px;
 }
 
+/* ================= LOGO ================= */
+.logo {
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+@media (max-width: 910px) {
+   font-size: 25px;
+}
+  @media (max-width: 768px) {
+    font-size: 24px;
+    text-align: center;
+    flex: 1;
+    margin-left: 20px;
+  }
+}
+
+/* ================= DESKTOP NAV ================= */
 .nav {
   display: flex;
   gap: 40px;
 
   a {
-    color: #ffffff; // базовый цвет
+    color: #ffffff;
     font-family: "Inter-Medium", sans-serif;
     font-weight: 500;
     font-size: 22px;
-    text-decoration: none; // убираем подчеркивание
+    text-decoration: none;
     cursor: pointer;
+    transition: color 0.3s;
 
     &:hover {
-      color: #b9f2a1; // цвет при наведении на конкретную ссылку
+      color: #b9f2a1;
     }
   }
+@media (max-width: 900px) {
+   a {
+  font-size: 18px;
+   }
 
-  .home {
-    font-weight: 700;
-    color: #b9f2a1; // начальный цвет для Home
+   .nav {
+ 
+  gap: 15px;
+   }
+}
+  @media (max-width: 790px) {
+ 
+  gap: 15px;
+   
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+
   }
 }
 
-  
-
+/* ================= CONTACT BUTTON ================= */
 .button {
   background: #b8f1a5;
   padding: 14px 18px;
   border-radius: 8px;
-    font-family: "Inter-SemiBold", sans-serif;
+  font-family: "Inter-SemiBold", sans-serif;
   font-size: 13px;
   font-weight: 600;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 60px;
+    height: 28px;
+    padding: 0;
+    font-size: 10px;
+  }
 }
 
+/* ================= BURGER ================= */
+.burger {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background: #b8f1a5;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+/* ================================================= */
+/* =============== FULLSCREEN MOBILE MENU ========== */
+/* ================================================= */
+
+.mobileMenu {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  z-index: 100;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* OPEN STATE */
+.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* CLOSE ICON */
+.close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+}
+
+/* MOBILE NAV LINKS */
+.mobileNav {
+  margin-top: 120px;
+  padding-left: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  a {
+    font-family: "Inter-Medium", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+/* HIDE MOBILE MENU ON DESKTOP */
+@media (min-width: 769px) {
+  .mobileMenu {
+    display: none;
+  }
+}

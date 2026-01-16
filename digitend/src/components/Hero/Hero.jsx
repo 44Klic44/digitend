@@ -1,13 +1,18 @@
 import { Container } from '../../ui/Container/Container';
 import styles from './Hero.module.scss';
+import heroImage from '../../assets/header/amico (1).png';
 
 export const Hero = () => {
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} id="home">
       <Container>
-        <div className={styles.content}>
-          <div className={styles.text}>
-            <h1>Your Trusted Digital Agency Partner</h1>
+        <div className={styles.inner}>
+          {/* TEXT */}
+          <div className={styles.content}>
+            <h1>
+              Your Trusted Digital <span>Agency</span> Partner
+            </h1>
+
             <p>
               Lorem ipsum dolor sit amet consectetur. Semper a interdum
               purus velit ullamcorper.
@@ -19,11 +24,10 @@ export const Hero = () => {
             </div>
           </div>
 
-          <img
-            src="/hero.png"
-            alt="Hero illustration"
-            className={styles.image}
-          />
+          {/* IMAGE */}
+          <div className={styles.imageWrap}>
+            <img src={heroImage} alt="Digital Agency" />
+          </div>
         </div>
       </Container>
     </section>
