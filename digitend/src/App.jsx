@@ -9,10 +9,11 @@ function App() {
 
   return (
     <>
-       <div className="hero-bg">
+    <div className="hero-bg">
       <Header />
       <Hero />
     </div>
+       
     </>
   )
 }

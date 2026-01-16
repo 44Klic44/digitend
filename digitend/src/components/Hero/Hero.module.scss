@@ -1,11 +1,11 @@
 .hero {
-  background-image: url('../../assets/header/fon-header.png');
+ 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   color: #ffffff;
-  padding: 45px 0 137px;
+  padding: 45px 0 170px;
 }
 
 /* GRID */
@@ -36,6 +36,7 @@ h1 {
   line-height: 1.2;
   margin-bottom: 0px;
   font-weight: 700;
+  margin-top: 0px;
 
   span {
     color: #b9f2a1;
@@ -96,10 +97,20 @@ padding: 18px 42px;
 
   img {
     width: 100%;
-    max-width: 520px;
+    max-width: 440px;
   }
 
   @media (max-width: 768px) {
     margin-top: 40px;
   }
 }
+
+
+
+
+
+
+
+
+
+
