@@ -7,26 +7,35 @@ export const Hero = () => {
     <section className={styles.hero} id="home">
       <Container>
         <div className={styles.inner}>
-          {/* TEXT */}
+          {/* Текстовая часть с кнопками для десктопа */}
           <div className={styles.content}>
-            <h1>
-              Your Trusted Digital <span>Agency</span> Partner
-            </h1>
+            <div className={styles.textContent}>
+              <h1>
+                Your Trusted Digital <span>Agency</span> Partner
+              </h1>
 
-            <p>
-              Lorem ipsum dolor sit amet consectetur. Semper a interdum
-              purus velit ullamcorper.
-            </p>
-
-            <div className={styles.actions}>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Semper a interdum
+                purus velit ullamcorper.
+              </p>
+            </div>
+            
+            {/* Кнопки для десктопа */}
+            <div className={`${styles.actions} ${styles.desktopActions}`}>
               <button className={styles.primary}>Get Started</button>
               <button className={styles.secondary}>Explore More</button>
             </div>
           </div>
 
-          {/* IMAGE */}
+          {/* Картинка */}
           <div className={styles.imageWrap}>
             <img src={heroImage} alt="Digital Agency" />
+          </div>
+
+          {/* Кнопки для мобилки */}
+          <div className={`${styles.actions} ${styles.mobileActions}`}>
+            <button className={styles.primary}>Get Started</button>
+            <button className={styles.secondary}>Explore More</button>
           </div>
         </div>
       </Container>

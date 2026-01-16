@@ -1,9 +1,7 @@
 .hero {
- 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   color: #ffffff;
   padding: 45px 0 170px;
 }
@@ -16,17 +14,26 @@
   gap: 40px;
 
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    gap: 0;
   }
 }
 
-/* TEXT */
+/* Основной контейнер с текстом */
 .content {
   max-width: 520px;
 
   @media (max-width: 768px) {
     max-width: 100%;
+    order: 1;
+  }
+}
+
+.textContent {
+  @media (max-width: 768px) {
+    order: 1;
   }
 }
 
@@ -42,8 +49,13 @@ h1 {
     color: #b9f2a1;
   }
 
+  @media (max-width: 910px) {
+    font-size: 37px;
+  }
+  
   @media (max-width: 768px) {
-    font-size: 36px;
+    max-width: 354px;
+    margin: 0 auto;
   }
 }
 
@@ -54,40 +66,78 @@ p {
   opacity: 0.9;
   margin-bottom: 40px;
   max-width: 410px;
-}
 
-/* BUTTONS */
-.actions {
-  display: flex;
-  gap: 16px;
-
+  @media (max-width: 910px) {
+    font-size: 14px;
+  }
+  
   @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
+    max-width: 302px;
+    padding-top: 25px;
+    padding-bottom: 0px;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 
+/* Общие стили для кнопок */
+.actions {
+  display: flex;
+  gap: 16px;
+}
+
+/* Кнопки для десктопа */
+.desktopActions {
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+}
+
+/* Кнопки для мобилки */
+.mobileActions {
+  display: none;
+  
+  @media (max-width: 768px) {
+    display: flex;
+         justify-content: center;
+
+    order: 3;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+/* Стили кнопок */
 .primary {
   background: #b8f1a5;
   color: #1d1d1d;
-padding: 18px 42px;
+  padding: 18px 42px;
   border-radius: 10px;
   font-family: "Inter-SemiBold", sans-serif;
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
+  border: none;
+  
+  @media (max-width: 910px) {
+    padding: 18px 27px;
+  }
 }
 
 .secondary {
   background: transparent;
   color: #ffffff;
- padding: 18px 33px;
+  padding: 18px 33px;
   border-radius: 10px;
   border: 1px solid #b8f1a5;
   font-family: "Inter-SemiBold", sans-serif;
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
+  
+  @media (max-width: 910px) {
+    padding: 18px 18px;
+  }
 }
 
 /* IMAGE */
@@ -101,16 +151,7 @@ padding: 18px 42px;
   }
 
   @media (max-width: 768px) {
-    margin-top: 40px;
+    order: 2;
+    margin: 40px 0;
   }
 }
-
-
-
-
-
-
-
-
-
-
