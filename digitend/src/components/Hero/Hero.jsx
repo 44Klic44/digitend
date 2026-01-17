@@ -14,7 +14,7 @@ export const Hero = () => {
                 Your Trusted Digital <span>Agency</span> Partner
               </h1>
 
-              <p>
+              <p className={styles.herodesc}>
                 Lorem ipsum dolor sit amet consectetur. Semper a interdum
                 purus velit ullamcorper.
               </p>
