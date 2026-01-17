@@ -23,4 +23,8 @@ button {
   background-size: cover;
    background-position: bottom center;
   background-repeat: no-repeat;
+
+  @media (max-width: 767px) {
+       background-image: url('/src/assets/header/mobile fon.png');
+    }
 }

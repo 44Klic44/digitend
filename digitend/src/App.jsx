@@ -13,10 +13,9 @@ function App() {
     <div className="hero-bg">
       <Header />
       <Hero />
-      <Clients/>
-    
       
     </div>
+    <Clients/>
    
        
     </>

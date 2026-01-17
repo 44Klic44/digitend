@@ -4,6 +4,9 @@
   background-repeat: no-repeat;
   color: #ffffff;
   padding: 45px 0 170px;
+    @media (max-width: 768px) {
+     padding: 45px 0 100px;
+  }
 }
 
 /* GRID */
