@@ -1,11 +1,12 @@
 .clients {
   padding: 0px 20px;
   background-color: #fff;
+    
    @media (max-width: 767px) {
         padding: 0px 0px 0px 0px;
     }
   .container {
-    max-width: 1200px;
+    max-width: 1392px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -60,15 +61,16 @@
   
   .logosGrid {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 141px;
+      justify-content: space-between;
+  
+    gap: 41px;
     
     @media (max-width: 1024px) {
       gap: 80px;
     }
     
     @media (max-width: 767px) {
+      align-items: center;
       flex-direction: column;
       gap: 40px;
     }
