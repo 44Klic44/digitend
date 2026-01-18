@@ -1,0 +1,362 @@
+.services {
+  padding: 100px 20px;
+  background-color: #fff;
+  
+  @media (max-width: 768px) {
+    padding: 50px 20px;
+  }
+  
+  .container {
+    max-width: 1392px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 80px;
+    
+    @media (max-width: 768px) {
+      margin-bottom: 40px;
+    }
+  }
+  
+  .title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 32px;
+    color: #333;
+    
+    @media (max-width: 768px) {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  .subtitle {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+    
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+  
+  .card {
+    width: 100%;
+    height: 580px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    
+    &:hover {
+      transform: translateY(-8px);
+      border-color: #659365;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      
+      .exploreButton {
+        color: #659365;
+        
+        .arrowIcon {
+          filter: brightness(0) saturate(100%) invert(40%) sepia(30%) saturate(600%) hue-rotate(80deg);
+          transform: translateX(5px);
+        }
+      }
+    }
+    
+    &.hovered {
+      transform: translateY(-8px);
+      border-color: #659365;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      
+      .exploreButton {
+        color: #659365;
+        
+        .arrowIcon {
+          filter: brightness(0) saturate(100%) invert(40%) sepia(30%) saturate(600%) hue-rotate(80deg);
+          transform: translateX(5px);
+        }
+      }
+    }
+    
+    @media (max-width: 768px) {
+      height: auto;
+      min-height: 500px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+  
+  .cardImage {
+    width: 100%;
+    height: 213px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 16px;
+    
+    img {
+      width: 288px;
+      height: 213px;
+      object-fit: contain;
+    }
+  }
+  
+  .cardContent {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .cardTitle {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+    
+    @media (max-width: 768px) {
+      font-size: 22px;
+    }
+  }
+  
+  .cardDescription {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 30px;
+    flex-grow: 1;
+    
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+  
+  .exploreButton {
+    background: transparent;
+    border: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    padding: 0;
+    cursor: default;
+  }
+  
+  .arrowIcon {
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease;
+  }
+}
+
+// Модальное окно
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+  padding: 40px 20px;
+  
+  @media (max-width: 768px) {
+    padding: 0px 15px 20px;
+    align-items: flex-start;
+  }
+}
+
+.modalContent {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  animation: slideUp 0.3s ease;
+  max-height: calc(90vh - 40px);
+  display: flex;
+  flex-direction: column;
+  
+  @media (max-width: 768px) {
+    max-height: calc(100vh - 80px);
+    margin-top: 40px;
+  }
+}
+
+.modalHeader {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px;
+  border-bottom: 1px solid #eee;
+  
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+}
+
+.modalTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+}
+
+.modalCloseButton {
+  display: none;
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 32px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  line-height: 1;
+  
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.modalBody {
+  padding: 30px 40px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  overflow-y: auto;
+  flex-grow: 1;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 20px;
+  }
+}
+
+.modalImage {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+.modalText {
+  display: flex;
+  flex-direction: column;
+}
+
+.modalDescription {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+  
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.modalFooter {
+  padding: 25px 40px;
+  text-align: right;
+  border-top: 1px solid #eee;
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+  
+  @media (max-width: 768px) {
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+.closeModalButton {
+  background: #659365;
+  color: white;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 120px;
+  
+  &:hover {
+    background: #4a7a4a;
+  }
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+// Анимации
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
