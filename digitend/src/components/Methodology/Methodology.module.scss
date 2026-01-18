@@ -14,10 +14,15 @@
 
     @media (max-width: 1110px) {
        gap: 20px;
+      
      }
+
+  @media (max-width: 769px) {
+  gap: 0px;
+  }
     @media (min-width: 769px) {
       display: grid;
-      grid-template-columns: 1fr 596px;
+      grid-template-columns: 1fr 1fr;
       grid-template-rows: auto auto;
       gap: 20px;
       align-items: start;
@@ -31,6 +36,7 @@
         grid-column: 2;
         grid-row: 1 / span 2;
         align-self: center;
+        
       }
       
       .buttonContainer {
@@ -53,11 +59,13 @@
       .videoSection {
         order: 2;
         margin: 35px 0;
+        display: flex;
+        justify-content: center;
       }
       
       .buttonContainer {
         order: 3;
-        margin-top: 50px;
+        margin-top: 5px;
       }
     }
   }
@@ -76,6 +84,7 @@
       font-size: 36px;
       margin-bottom: 15px;
       margin-top: 36px;
+      max-width: 368px;
     }
   }
   
@@ -88,6 +97,7 @@
     
     @media (max-width: 768px) {
       font-size: 14px;
+              margin: 0 auto;
     }
   }
   
@@ -158,6 +168,11 @@
       height: 70px;
       margin-left: 5px;
       transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+         @media (max-width: 768px) {
+      width: 50px;
+      height: 50px;
+    }
     }
   }
 }
