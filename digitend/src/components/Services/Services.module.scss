@@ -1,5 +1,5 @@
 .services {
-  padding: 100px 20px;
+  padding: 80px 20px;
   background-color: #fff;
   
   @media (max-width: 768px) {
@@ -24,7 +24,7 @@
     font-size: 48px;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
     color: #333;
     
     @media (max-width: 768px) {
@@ -62,6 +62,11 @@
     }
   }
   
+  .arrowIcon {
+
+   margin-top: 3px;
+  }
+
   .card {
     width: 100%;
     height: 580px;
@@ -84,6 +89,7 @@
         color: #659365;
         
         .arrowIcon {
+          
           filter: brightness(0) saturate(100%) invert(40%) sepia(30%) saturate(600%) hue-rotate(80deg);
           transform: translateX(5px);
         }
@@ -99,6 +105,7 @@
         color: #659365;
         
         .arrowIcon {
+
           filter: brightness(0) saturate(100%) invert(40%) sepia(30%) saturate(600%) hue-rotate(80deg);
           transform: translateX(5px);
         }
@@ -115,7 +122,7 @@
   
   .cardImage {
     width: 100%;
-    height: 213px;
+    height: 232px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -141,7 +148,7 @@
   .cardTitle {
     font-size: 24px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     color: #333;
     
     @media (max-width: 768px) {
@@ -176,6 +183,7 @@
   }
   
   .arrowIcon {
+
     width: 20px;
     height: 20px;
     transition: all 0.3s ease;
@@ -276,7 +284,7 @@
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     padding: 20px;
-    gap: 20px;
+    gap: 0px;
   }
 }
 
@@ -289,7 +297,13 @@
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+
+
+    @media (max-width: 768px) {
+    display: none;
   }
+  }
+   
 }
 
 .modalText {
