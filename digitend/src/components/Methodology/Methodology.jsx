@@ -60,7 +60,7 @@ const Methodology = () => {
             </h1>
           
             <p className={styles.description}>
-              Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper.
+              Our proven methodology combines strategic planning with cutting-edge technology to transform your digital vision into reality.
             </p>
           </div>
 

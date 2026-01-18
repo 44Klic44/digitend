@@ -15,8 +15,7 @@ export const Hero = () => {
               </h1>
 
               <p className={styles.herodesc}>
-                Lorem ipsum dolor sit amet consectetur. Semper a interdum
-                purus velit ullamcorper.
+                We create innovative digital solutions that drive growth and enhance your online presence.
               </p>
             </div>
             

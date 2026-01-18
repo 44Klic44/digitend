@@ -5,8 +5,8 @@ import arrowIcon from '../../assets/icons/Arrow.svg';
 
 // Импортируем изображения карточек
 import amicoImage from '../../assets/Services/amico.png';
-import cuateImage from '../../assets/Services/cuate.png';
-import rafikiImage from '../../assets/Services/rafiki.png';
+import cuateImage from '../../assets/Services/rafiki.png';
+import rafikiImage from '../../assets/Services/cuate.png';
 
 const ModalPortal = ({ children }) => {
   const [modalRoot, setModalRoot] = useState(null);
@@ -39,25 +39,25 @@ const Services = () => {
     {
       id: 1,
       title: 'Digital Marketing',
-      description: 'Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper. Lorem ipsum dolor sit',
+      description: 'Strategic campaigns across all digital channels to increase visibility, engagement, and conversion rates for your business.',
       detailedTitle: 'Digital Marketing',
-      detailedDescription: 'Полное описание Digital Marketing услуг. Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper. Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper. Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper. Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper.Полное описание Digital Marketing услуг. Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper. Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper. Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper. Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper.Полное описание Digital Marketing услуг. Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper. Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper. Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper. Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper.',
+      detailedDescription: 'Our digital marketing services encompass the full cycle of promoting your brand in the online environment. We develop comprehensive strategies that include social media management, pay-per-click advertising, email marketing, and performance analytics. Each campaign is meticulously planned based on an analysis of your target audience and competitive landscape. We utilize advanced automation and tracking tools to optimize budgets and achieve maximum conversion. Our goal is not just to increase reach, but to create a sustainable system for attracting and retaining customers that delivers measurable business results.',
       image: amicoImage,
     },
     {
       id: 2,
       title: 'SEO Consultancy',
-      description: 'Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper. Lorem ipsum dolor sit',
+      description: 'Data-driven SEO strategies that improve search rankings, drive organic traffic, and establish your online authority.',
       detailedTitle: 'SEO Consultancy',
-      detailedDescription: 'Полное описание SEO Consultancy услуг. Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper. Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper. Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper. Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper.',
+      detailedDescription: 'Our SEO consultancy is based on deep analysis of your websites technical aspects and a strategic approach to content optimization. We conduct comprehensive audits to identify factors hindering ranking growth and develop a phased improvement plan. Our work includes technical website optimization, semantic core research, creation of relevant content, and building high-quality backlinks. We focus on sustainable results, using only white-hat promotion methods that comply with search engine guidelines and ensure long-term organic traffic growth.',
       image: cuateImage,
     },
     {
       id: 3,
       title: 'Content Writing',
-      description: 'Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper. Lorem ipsum dolor sit',
+      description: 'Compelling content creation that tells your brand story, engages your audience, and supports your marketing objectives.',
       detailedTitle: 'Content Writing',
-      detailedDescription: 'Полное описание Content Writing услуг. Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper. Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper. Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper. Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper.',
+      detailedDescription: 'Our copywriting team creates content that doesnt just inform, but engages and converts. We develop content strategies based on understanding your brand, business goals, and target audience profile. From SEO-optimized website texts to video scripts and social media posts, we ensure a consistent tone and communication style. Each piece undergoes multiple quality checks for uniqueness and alignment with marketing objectives, helping to strengthen your brand authority and improve its visibility in search engines.',
       image: rafikiImage,
     },
   ];
@@ -93,7 +93,7 @@ const Services = () => {
           <div className={styles.header}>
             <h1 className={styles.title}>Our Services</h1>
             <p className={styles.subtitle}>
-              Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper.
+              Comprehensive digital services designed to elevate your brand and accelerate business growth in the modern marketplace.
             </p>
           </div>
 

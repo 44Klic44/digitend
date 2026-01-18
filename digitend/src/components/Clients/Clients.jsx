@@ -21,7 +21,7 @@ const Clients = () => {
         <div className={styles.content}>
           <h2 className={styles.title}>OUR CLIENTS</h2>
           <p className={styles.description}>
-            Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper.
+          Trusted by leading companies worldwide to deliver exceptional digital experiences and measurable results.
           </p>
         </div>
         
