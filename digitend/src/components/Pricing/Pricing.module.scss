@@ -3,7 +3,7 @@
   background-color: rgba(185, 242, 161, 0.35); // #B9F2A1 с 35% прозрачности
   
   @media (max-width: 768px) {
-    padding: 60px 20px;
+    padding: 50px 20px;
   }
   
   .container {
@@ -30,6 +30,7 @@
     @media (max-width: 768px) {
       font-size: 36px;
       margin-bottom: 20px;
+      margin-top: 0;
     }
   }
   
@@ -59,7 +60,6 @@
   }
   
   .card {
-    width: 390px;
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -67,10 +67,21 @@
     display: flex;
     flex-direction: column;
     transition: box-shadow 0.3s ease;
+
+  
+
+
+
+     
+    // На десктопе - пропорциональная ширина
+    @media (min-width: 993px) {
+      flex: 1;
+      max-width: 464px; // 1392px / 3 = 464px
+    }
     
     // Стандартные карточки (Free и Enterprise)
     &:not(.premium) {
-      height: 669px;
+      height: 600px; // Изменено с 669px на 600px
       position: relative;
       
       &:hover {
@@ -80,12 +91,12 @@
     
     // Премиум карточка
     &.premium {
-      height: 730px;
+      height: 640px; // Изменено с 730px на 640px
       background: linear-gradient(to bottom, #073340, #659365);
       border: none;
       z-index: 2;
       margin: 0 -2px; // Убираем двойную границу между карточками
-      transform: translateY(30px);
+      transform: translateY(20px); // Небольшое поднятие
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       
       &:hover {
@@ -93,7 +104,6 @@
       }
       
       .cardTitle,
-      .price,
       .featureText {
         color: #fff;
       }
@@ -106,6 +116,9 @@
     &.enterprise {
       border-color: #659365;
     }
+
+
+ 
     
     @media (max-width: 992px) {
       width: 390px;
@@ -133,15 +146,19 @@
   }
   
   .cardContent {
-    padding: 40px 70px;
+    padding: 20px 70px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    
+
+          @media (max-width: 1200px) {
+padding: 20px 36px;
+
+     }
     @media (max-width: 768px) {
-      padding: 40px 30px;
+      padding: 25px 67px;
     }
   }
   
@@ -151,6 +168,10 @@
     margin-bottom: 30px;
     margin-top: 10px;
     color: #333;
+
+     @media (max-width: 768px) {
+     font-size: 39px;
+    }
   }
   
   .price {
@@ -163,6 +184,9 @@
       font-size: 37px;
       font-weight: 500;
       color: #000000;
+      @media (max-width: 768px) {
+     font-size: 28px;
+    }
     }
     
     .priceSlash {
@@ -177,15 +201,13 @@
       color: #999;
     }
     
-  &.premium {
-  .price {
-    .priceAmount,
-    .priceSlash,
-    .pricePeriod {
-      color: #fff !important;
+    &.premium {
+      .priceAmount,
+      .priceSlash,
+      .pricePeriod {
+        color: #fff !important;
+      }
     }
-  }
-}
   }
   
   .features {
@@ -213,6 +235,10 @@
     margin-right: 14px;
     flex-shrink: 0;
     margin-top: 2px;
+    @media (max-width: 768px) {
+      width: 11px;
+    height: 11px;
+    }
   }
   
   .featureText {
@@ -220,6 +246,10 @@
     line-height: 1.1;
     color: #333;
     font-weight: 300;
+ @media (max-width: 768px) {
+     font-size: 16px;
+    }
+    
   }
   
   .chooseButton {
@@ -259,7 +289,7 @@
       &:hover {
         background: #f0f0f0;
         transform: translateY(-3px);
-             box-shadow: 0 10px 20px rgba(168, 241, 165, 0.3);
+        box-shadow: 0 10px 20px rgba(168, 241, 165, 0.3);
       }
       
       &:active {
@@ -268,12 +298,12 @@
     }
     
     @media (max-width: 768px) {
-      margin-bottom: 40px;
+      margin-bottom: 15px;
     }
   }
 }
 
-
+// Дополнительные стили для белого текста в центральной карточке
 .card.premium {
   .cardContent {
     .price {
@@ -282,6 +312,20 @@
       .pricePeriod {
         color: #fff !important;
       }
+    }
+  }
+}
+
+// Дополнительные стили для лучшего выравнивания на десктопе
+@media (min-width: 993px) {
+  .cards {
+    justify-content: space-between; // Равномерное распределение
+  }
+  
+  .card {
+    &.premium {
+      margin: 0 -15px; // Компенсируем отсутствие бордера
+      z-index: 10;
     }
   }
 }
