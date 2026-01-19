@@ -1,0 +1,287 @@
+.pricing {
+  padding: 12px 20px 90px 20px;
+  background-color: rgba(185, 242, 161, 0.35); // #B9F2A1 с 35% прозрачности
+  
+  @media (max-width: 768px) {
+    padding: 60px 20px;
+  }
+  
+  .container {
+    max-width: 1392px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 60px;
+    
+    @media (max-width: 768px) {
+      margin-bottom: 40px;
+    }
+  }
+  
+  .title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: #333;
+    
+    @media (max-width: 768px) {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  .subtitle {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0;
+    
+    @media (max-width: 992px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+  }
+  
+  .card {
+    width: 390px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid #659365;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease;
+    
+    // Стандартные карточки (Free и Enterprise)
+    &:not(.premium) {
+      height: 669px;
+      position: relative;
+      
+      &:hover {
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+      }
+    }
+    
+    // Премиум карточка
+    &.premium {
+      height: 730px;
+      background: linear-gradient(to bottom, #073340, #659365);
+      border: none;
+      z-index: 2;
+      margin: 0 -2px; // Убираем двойную границу между карточками
+      transform: translateY(30px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      
+      &:hover {
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+      }
+      
+      .cardTitle,
+      .price,
+      .featureText {
+        color: #fff;
+      }
+      
+      .checkIcon {
+        filter: brightness(0) invert(1);
+      }
+    }
+    
+    &.enterprise {
+      border-color: #659365;
+    }
+    
+    @media (max-width: 992px) {
+      width: 390px;
+      height: auto !important;
+      min-height: 532px;
+      margin: 0 auto;
+      
+      &.premium {
+        margin: 0 auto;
+        transform: none;
+        height: auto !important;
+        min-height: 580px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      width: 100%;
+      max-width: 400px;
+      min-height: auto;
+      
+      &.premium {
+        min-height: auto;
+      }
+    }
+  }
+  
+  .cardContent {
+    padding: 40px 70px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    @media (max-width: 768px) {
+      padding: 40px 30px;
+    }
+  }
+  
+  .cardTitle {
+    font-size: 45px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  .price {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+    
+    .priceAmount {
+      font-size: 37px;
+      font-weight: 500;
+      color: #000000;
+    }
+    
+    .priceSlash {
+      font-size: 25px;
+      font-weight: 400;
+      color: #999;
+      margin: 0 2px;
+    }
+    
+    .pricePeriod {
+      font-size: 20px;
+      color: #999;
+    }
+    
+  &.premium {
+  .price {
+    .priceAmount,
+    .priceSlash,
+    .pricePeriod {
+      color: #fff !important;
+    }
+  }
+}
+  }
+  
+  .features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+    flex-grow: 1;
+    width: 100%;
+  }
+  
+  .featureItem {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    text-align: left;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  .checkIcon {
+    width: 12px;
+    height: 15px;
+    margin-right: 14px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  
+  .featureText {
+    font-size: 20px;
+    line-height: 1.1;
+    color: #333;
+    font-weight: 300;
+  }
+  
+  .chooseButton {
+    width: 187px;
+    height: 60px;
+    border-radius: 10px;
+    font-family: "Inter-SemiBold", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: auto;
+    margin-bottom: 10px;
+    
+    // Стандартная кнопка (для Free и Enterprise)
+    &.standardButton {
+      background: #b8f1a5;
+      color: #1d1d1d;
+      
+      &:hover {
+        background: #a0d88f;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(168, 241, 165, 0.3);
+      }
+      
+      &:active {
+        transform: translateY(-1px);
+      }
+    }
+    
+    // Кнопка для Premium
+    &.premiumButton {
+      background: #B8F1B0;
+      color: #1d1d1d;
+      
+      &:hover {
+        background: #f0f0f0;
+        transform: translateY(-3px);
+             box-shadow: 0 10px 20px rgba(168, 241, 165, 0.3);
+      }
+      
+      &:active {
+        transform: translateY(-1px);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+
+.card.premium {
+  .cardContent {
+    .price {
+      .priceAmount,
+      .priceSlash,
+      .pricePeriod {
+        color: #fff !important;
+      }
+    }
+  }
+}
