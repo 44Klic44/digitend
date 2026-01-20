@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import styles from './Portfolio.module.scss';
 
 import centralImg from '../../assets/Portfolio/central-img.png';
@@ -11,65 +10,96 @@ import img5 from '../../assets/Portfolio/unsplash_JKUTrJ4vK00.png';
 import img6 from '../../assets/Portfolio/unsplash_pKRNxEguRgM.png';
 import img7 from '../../assets/Portfolio/unsplash_qwtCeJ5cLYs.png';
 import img8 from '../../assets/Portfolio/unsplash_sv8oOQaUb-o.png';
+import img9 from '../../assets/Portfolio/img9.png';
 
-import arrowIcon from '../../assets/icons/Vector.svg';
-
-const images = [
-  img1, img2, img3, img4,
-  img5, img6, img7, img8
-];
+import arrowIcon from '../../assets/icons/arrow-vhite.svg';
 
 const Portfolio = () => {
-  const [open, setOpen] = useState(false);
-
   return (
-    <>
-      <section className={styles.portfolio}>
-        {/* HEADER — как в других блоках */}
-        <div className={styles.header}>
-          <h2 className={styles.title}>Our Portfolio</h2>
-          <p className={styles.description}>
-            Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper.
-          </p>
+    <section className={styles.portfolio}>
+      <div className={styles.header}>
+        <h2 className={styles.title}>Our Portfolio</h2>
+        <p className={styles.description}>
+          Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper.
+        </p>
+      </div>
+
+      {/* DESKTOP MOSAIC */}
+      <div className={styles.mosaic}>
+        <div className={`${styles.item} ${styles.leftTall}`}>
+          <img src={img1} alt="" />
         </div>
 
-        {/* FULL WIDTH MOSAIC */}
-        <div className={styles.mosaic}>
-          {/* CENTRAL */}
-          <div
-            className={styles.central}
-            style={{ backgroundImage: `url(${centralImg})` }}
-            onClick={() => setOpen(true)}
-          >
-            <div className={styles.overlay}>
-              <div>
-                <h3>Website Dashboard Design</h3>
-                <p>Lorem ipsum dolor sit amet consectetur. Semper a interdum p</p>
-              </div>
-              <img src={arrowIcon} alt="Open gallery" />
+        <div className={`${styles.item} ${styles.col2Top}`}>
+          <img src={img2} alt="" />
+        </div>
+
+        <div className={`${styles.item} ${styles.col2Bottom}`}>
+          <img src={img3} alt="" />
+        </div>
+
+        {/* CENTRAL LINK */}
+        <a
+          href="#"
+          className={styles.central}
+          style={{ backgroundImage: `url(${centralImg})` }}
+        >
+          <div className={styles.overlay}>
+            <div>
+              <h3>Website Dashboard Design</h3>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
             </div>
+            <img src={arrowIcon} alt="Go to portfolio" />
           </div>
+        </a>
 
-          {/* OTHER IMAGES */}
-          {images.map((img, i) => (
-            <div key={i} className={styles.item}>
-              <img src={img} alt="" />
+        <div className={`${styles.item} ${styles.col5}`}>
+          <img src={img4} alt="" />
+        </div>
+
+        <div className={`${styles.item} ${styles.col6}`}>
+          <img src={img5} alt="" />
+        </div>
+
+        <div className={`${styles.item} ${styles.bottomWide}`}>
+          <img src={img6} alt="" />
+        </div>
+
+        <div className={`${styles.item} ${styles.bottomCenter}`}>
+          <img src={img7} alt="" />
+        </div>
+
+        <div className={`${styles.item} ${styles.bottomRight}`}>
+          <img src={img9} alt="" />
+        </div>
+
+        <div className={`${styles.item} ${styles.rightBig}`}>
+          <img src={img8} alt="" />
+        </div>
+      </div>
+
+      {/* MOBILE */}
+      <div className={styles.mobile}>
+        <a
+          href="#"
+          className={styles.mobileCentral}
+          style={{ backgroundImage: `url(${centralImg})` }}
+        >
+          <div className={styles.overlay}>
+            <div>
+              <h3>Website Dashboard Design</h3>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
             </div>
-          ))}
-        </div>
-      </section>
-
-      {/* SLIDER */}
-      {open && (
-        <div className={styles.sliderOverlay} onClick={() => setOpen(false)}>
-          <div className={styles.slider} onClick={e => e.stopPropagation()}>
-            {images.map((img, i) => (
-              <img key={i} src={img} alt="" />
-            ))}
+            <img src={arrowIcon} alt="Go to portfolio" />
           </div>
+        </a>
+
+        <div className={styles.mobileGrid}>
+          <img src={img2} alt="" />
+          <img src={img3} alt="" />
         </div>
-      )}
-    </>
+      </div>
+    </section>
   );
 };
 
