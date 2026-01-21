@@ -20,7 +20,7 @@ const Portfolio = () => {
       <div className={styles.header}>
         <h2 className={styles.title}>Our Portfolio</h2>
         <p className={styles.description}>
-          Lorem ipsum dolor sit amet consectetur. Semper a interdum purus velit ullamcorper.
+       Discover how we transform ideas into impactful digital experiences
         </p>
       </div>
 
