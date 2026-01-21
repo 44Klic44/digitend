@@ -8,6 +8,7 @@ import Methodology from './components/Methodology/Methodology'
 import Services from './components/Services/Services'
 import Pricing from './components/Pricing/Pricing'
 import Portfolio from './components/Portfolio/Portfolio'
+import ContactForm from './components/ContactForm/ContactForm'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,6 +25,7 @@ function App() {
     <Services/>
     <Pricing/>
     <Portfolio/>
+    <ContactForm/>
        
     </>
   )
