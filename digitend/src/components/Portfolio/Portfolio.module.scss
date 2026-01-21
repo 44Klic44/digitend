@@ -11,9 +11,13 @@
 }
 
 .title {
+  margin-top: 70px;
   font-size: 48px;
   font-weight: 700;
+  margin-bottom: 16px;
 }
+
+
 
 .description {
   font-size: 18px;
@@ -62,10 +66,11 @@
 
 /* OVERLAY */
 .overlay {
-  position: absolute;
+  
   inset: auto 0 0 0;
-  padding: 24px;
-  background: rgba(0,0,0,0.55);
+  padding: 60% 20px 20px 20px ;
+  margin-bottom: 2px;
+
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -95,11 +100,26 @@
 
 @media (max-width: 1024px) {
   .mosaic {
-    transform: scale(0.9);
+  
   }
 }
 
 @media (max-width: 768px) {
+
+  .overlay {
+    background-image: url("../../assets/Portfolio/central-img.png");
+  inset: auto 0 0 0;
+  padding: 90px 20px 20px 20px ;
+  margin-bottom: 2px;
+  background-size: cover;
+        background-position: bottom;
+  }
+  
+  .header {
+
+  margin: 0 auto 40px;
+  
+}
   .mosaic {
     display: none;
   }
@@ -119,8 +139,8 @@
 
   .mobileGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+   
+    gap: 2px;
 
     img {
       width: 100%;
@@ -130,6 +150,7 @@
   }
 
   .title {
+    margin-top: 50px;
     font-size: 36px;
   }
 

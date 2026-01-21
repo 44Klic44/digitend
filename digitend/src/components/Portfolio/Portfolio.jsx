@@ -47,7 +47,7 @@ const Portfolio = () => {
           <div className={styles.overlay}>
             <div>
               <h3>Website Dashboard Design</h3>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              <p>An interface that turns data into solutions.</p>
             </div>
             <img src={arrowIcon} alt="Go to portfolio" />
           </div>
@@ -88,7 +88,7 @@ const Portfolio = () => {
           <div className={styles.overlay}>
             <div>
               <h3>Website Dashboard Design</h3>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              <p>An interface that turns data into solutions.</p>
             </div>
             <img src={arrowIcon} alt="Go to portfolio" />
           </div>
@@ -97,7 +97,10 @@ const Portfolio = () => {
         <div className={styles.mobileGrid}>
           <img src={img2} alt="" />
           <img src={img3} alt="" />
+          <img src={img4} alt="" />
+          
         </div>
+        
       </div>
     </section>
   );
