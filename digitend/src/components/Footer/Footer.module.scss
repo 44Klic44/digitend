@@ -18,19 +18,25 @@
   @media (max-width: 600px) {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 0;
   }
 }
 
 /* BRAND */
 .brand {
   max-width: 340px;
+
+  @media (max-width: 600px) {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
 }
 
 .logo {
   font-family: "Inter-Bold", sans-serif;
   font-size: 26px;
   margin-bottom: 16px;
+  margin-top: 0px;
 }
 
 .desc {
@@ -66,16 +72,18 @@
   }
 }
 
-/* COLUMNS */
+/* COLUMNS - Desktop version (по умолчанию) */
 .column {
+  position: relative;
 
-  h4 {
+  .desktopTitle {
     font-family: "Inter-SemiBold", sans-serif;
     font-size: 16px;
     margin-bottom: 20px;
+    margin-top: 7px;
   }
 
-  ul {
+  .desktopList {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -92,6 +100,91 @@
 
         &:hover {
           color: #b8f1a5;
+        }
+      }
+    }
+  }
+}
+
+/* Mobile Accordion */
+.mobileAccordion {
+  display: none;
+}
+
+/* Mobile version */
+@media (max-width: 600px) {
+  .column {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 20px 0;
+    
+    .desktopTitle,
+    .desktopList {
+      display: none;
+    }
+    
+    .mobileAccordion {
+      display: block;
+      width: 100%;
+      
+      .accordionHeader {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: none;
+        border: none;
+        color: #ffffff;
+        padding: 0;
+        cursor: pointer;
+        text-align: left;
+
+        h4 {
+          margin: 0;
+          font-family: "Inter-SemiBold", sans-serif;
+          font-size: 16px;
+        }
+
+        .chevron {
+          transition: transform 0.3s ease;
+          opacity: 0.7;
+
+          &.rotated {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      .accordionContent {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        
+        &.open {
+          max-height: 300px;
+          margin-top: 16px;
+        }
+
+        .mobileList {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            margin-bottom: 12px;
+
+            a {
+              font-family: "Inter-Regular", sans-serif;
+              font-size: 14px;
+              color: rgba(255,255,255,0.7);
+              text-decoration: none;
+              transition: color 0.3s ease;
+              display: block;
+
+              &:hover {
+                color: #b8f1a5;
+              }
+            }
+          }
         }
       }
     }
