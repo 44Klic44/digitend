@@ -2,10 +2,12 @@ import { useEffect, useState } from 'react';
 import { Container } from '../../ui/Container/Container';
 import styles from './Header.module.scss';
 import menuIcon from '../../assets/icons/menu-line.svg';
+import { FormPopup } from '../Modal/FormPopup';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [popupOpen, setPopupOpen] = useState(false);
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : '';
@@ -49,7 +51,8 @@ export const Header = () => {
             <a href="#portfolio">Portfolio</a>
           </nav>
 
-          <button className={styles.button}>Contact US</button>
+          <button className={styles.button} onClick={() => setPopupOpen(true)}>Contact US</button>
+             <FormPopup isOpen={popupOpen} onClose={() => setPopupOpen(false)} />
         </div>
       </Container>
 
