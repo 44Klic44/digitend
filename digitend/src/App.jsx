@@ -16,18 +16,37 @@ function App() {
 
   return (
     <>
-    <div className="hero-bg">
-      <Header />
-      <Hero />
+     <div className="hero-bg">
+        <Header />
+
+        <section id="home">
+          <Hero />
+        </section>
+      </div>
+
+      <section id="clients">
+        <Clients />
+      </section>
+
+      <section id="about">
+        <Methodology />
+      </section>
+
+      <section id="services">
+        <Services />
+      </section>
+
+      <section id="pricing">
+        <Pricing />
+      </section>
       
-    </div>
-    <Clients/>
-    <Methodology/>
-    <Services/>
-    <Pricing/>
-    <Portfolio/>
-    <ContactForm/>
-       <Footer/>
+        <Portfolio />
+        
+      <section id="contact">
+        <ContactForm />
+      </section>
+
+      <Footer />
     </>
   )
 }

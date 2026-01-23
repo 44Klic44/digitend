@@ -16,7 +16,7 @@ import arrowIcon from '../../assets/icons/arrow-vhite.svg';
 
 const Portfolio = () => {
   return (
-    <section className={styles.portfolio}>
+    <section id="portfolio" className={styles.portfolio}>
       <div className={styles.header}>
         <h2 className={styles.title}>Our Portfolio</h2>
         <p className={styles.description}>

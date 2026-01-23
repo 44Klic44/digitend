@@ -28,3 +28,11 @@ button {
        background-image: url('/src/assets/header/mobile fon.png');
     }
 }
+
+section {
+  scroll-margin-top: 80px; /* чуть больше высоты хедера */
+}
+
+html {
+  scroll-behavior: smooth;
+}

@@ -1,6 +1,7 @@
 .portfolio {
   width: 100%;
   margin-bottom: 100px;
+  padding-top: 60px;
 }
 
 /* HEADER */
@@ -12,7 +13,7 @@
 }
 
 .title {
-  margin-top: 70px;
+  margin-top: 0px;
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 16px;
@@ -151,7 +152,7 @@
   }
 
   .title {
-    margin-top: 50px;
+    margin-top: 0px;
     font-size: 36px;
   }
 
@@ -161,5 +162,6 @@
 
   .portfolio {
   margin-bottom: 55px;
+    padding-top: 50px;
 }
 }
