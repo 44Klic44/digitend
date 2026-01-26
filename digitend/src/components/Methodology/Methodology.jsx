@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom';
 import styles from './Methodology.module.scss';
 import playIcon from '../../assets/icons/play-large-fill.svg';
 import videoPreloader from '../../assets/Methodology/metodology-video-preloader.png';
+import { FormPopup } from '../../components/Modal/FormPopup'; 
+
 
 const ModalPortal = ({ children }) => {
   const [modalRoot, setModalRoot] = useState(null);
+ 
 
   useEffect(() => {
     const div = document.createElement('div');
@@ -29,6 +32,7 @@ const ModalPortal = ({ children }) => {
 
 const Methodology = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+   const [isFormOpen, setIsFormOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -48,6 +52,7 @@ const Methodology = () => {
       document.removeEventListener('keydown', handleEsc);
     };
   }, [isModalOpen]);
+
 
   return (
     <>
@@ -80,7 +85,7 @@ const Methodology = () => {
 
           {/* Кнопка - отдельный элемент */}
           <div className={styles.buttonContainer}>
-            <button className={styles.contactButton}>
+            <button className={styles.contactButton}  onClick={() => setIsFormOpen(true)}>
               CONTACT US
             </button>
           </div>
@@ -108,8 +113,15 @@ const Methodology = () => {
               </div>
             </div>
           </div>
+   
         </ModalPortal>
       )}
+
+       <FormPopup
+  isOpen={isFormOpen}
+  onClose={() => setIsFormOpen(false)}
+/>
+      
     </>
   );
 };

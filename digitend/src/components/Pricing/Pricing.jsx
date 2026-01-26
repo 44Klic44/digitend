@@ -1,8 +1,13 @@
 import React from 'react';
 import styles from './Pricing.module.scss';
 import checkIcon from '../../assets/icons/Vector.svg';
+import { FormPopup } from '../../components/Modal/FormPopup'; 
+import { useState } from 'react';
 
 const Pricing = () => {
+
+    const [isFormOpen, setIsFormOpen] = useState(false);
+
   const plans = [
     {
       name: 'Free',
@@ -57,7 +62,7 @@ const Pricing = () => {
     <section className={styles.pricing}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.title}>Choose Our Plan</h2>
+          <h2 className={styles.title} >Choose Our Plan</h2>
           <p className={styles.subtitle}>
             Flexible pricing plans designed to scale with your business, from startup to enterprise.
           </p>
@@ -86,7 +91,7 @@ const Pricing = () => {
                   ))}
                 </ul>
                 
-                <button className={`${styles.chooseButton} ${plan.isPremium ? styles.premiumButton : styles.standardButton}`}>
+                <button  onClick={() => setIsFormOpen(true)} className={`${styles.chooseButton} ${plan.isPremium ? styles.premiumButton : styles.standardButton}`}>
                   {plan.buttonText}
                 </button>
               </div>
@@ -94,7 +99,12 @@ const Pricing = () => {
           ))}
         </div>
       </div>
+      <FormPopup
+  isOpen={isFormOpen}
+  onClose={() => setIsFormOpen(false)}
+/>
     </section>
+    
   );
 };
 

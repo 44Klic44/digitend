@@ -1,8 +1,13 @@
 import { Container } from '../../ui/Container/Container';
 import styles from './Hero.module.scss';
 import heroImage from '../../assets/header/amico (1).png';
+import { FormPopup } from '../Modal/FormPopup';
+import { useState } from 'react';
+
 
 export const Hero = () => {
+    const [isFormOpen, setIsFormOpen] = useState(false);
+
   return (
     <section className={styles.hero} id="home">
       <Container>
@@ -21,8 +26,8 @@ export const Hero = () => {
             
             {/* Кнопки для десктопа */}
             <div className={`${styles.actions} ${styles.desktopActions}`}>
-              <button className={styles.primary}>Get Started</button>
-              <button className={styles.secondary}>Explore More</button>
+              <button className={styles.primary}  onClick={() => setIsFormOpen(true)}>Get Started</button>
+              <button className={styles.secondary}  onClick={() => setIsFormOpen(true)}>Explore More</button>
             </div>
           </div>
 
@@ -33,11 +38,19 @@ export const Hero = () => {
 
           {/* Кнопки для мобилки */}
           <div className={`${styles.actions} ${styles.mobileActions}`}>
-            <button className={styles.primary}>Get Started</button>
-            <button className={styles.secondary}>Explore More</button>
+            <button className={styles.primary}  onClick={() => setIsFormOpen(true)}>Get Started</button>
+            <button className={styles.secondary}  onClick={() => setIsFormOpen(true)}>Explore More</button>
           </div>
         </div>
       </Container>
+
+<FormPopup
+        isOpen={isFormOpen}
+        onClose={() => setIsFormOpen(false)}
+      />
     </section>
+
+    
+    
   );
 };
